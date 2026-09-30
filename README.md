@@ -176,10 +176,6 @@ Conclusion
 
 The AI Image Text Extractor demonstrates how OCR technology can convert text from images into editable digital content. By combining Tesseract OCR with Streamlit, the project provides a simple interface for image-based text extraction and confidence analysis.
 LIVE DEMO:
-http://localhost:8501/    http://10.233.0.85:8501/
-<img width="949" height="244" alt="APP 1" src="https://github.com/user-attachments/assets/0b044683-3c98-478f-a6c2-a26ae7a89d48" />
-<img width="949" height="244" alt="APP3" src="https://github.com/user-attachments/assets/1f5a90cd-3545-4406-829f-de716b7deaa5" />
-<img width="908" height="359" alt="APP2" src="https://github.com/user-attachments/assets/bef7e633-9775-4490-842b-1df31fb6ed9d" />
 
 
 Author
