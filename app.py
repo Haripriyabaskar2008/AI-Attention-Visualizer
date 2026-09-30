@@ -3,23 +3,22 @@ from PIL import Image
 import pytesseract
 from pytesseract import Output
 import shutil
+import os
 
 
-# --------------------------------------------------
-# TESSERACT CONFIGURATION
-# --------------------------------------------------
-
+# Find Tesseract automatically
 tesseract_path = shutil.which("tesseract")
 
 if tesseract_path:
     pytesseract.pytesseract.tesseract_cmd = tesseract_path
-else:
-    # Local Windows fallback
-    windows_path = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-    if __import__("os").path.exists(windows_path):
-        pytesseract.pytesseract.tesseract_cmd = windows_path
+elif os.path.exists("/usr/bin/tesseract"):
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
+elif os.path.exists(r"C:\Program Files\Tesseract-OCR\tesseract.exe"):
+    pytesseract.pytesseract.tesseract_cmd = (
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    )
 
 # --------------------------------------------------
 # PAGE CONFIGURATION
